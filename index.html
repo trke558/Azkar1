@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>صفحة أذكار وصدقة جارية</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      margin: 0;
+      background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+      color: #003366;
+      min-height: 100vh;
+      padding-bottom: 50px;
+    }
+    header {
+      background-color: #004080cc;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      text-shadow: 1px 1px 3px #a1c4fd;
+    }
+    #description {
+      background: rgba(255, 255, 255, 0.9);
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 1.3em;
+      color: #002244;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      line-height: 1.5;
+    }
+    nav {
+      max-width: 800px;
+      margin: 30px auto 40px;
+      text-align: center;
+    }
+    nav button {
+      background-color: #005f99;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 5px 8px;
+      font-size: 1.1em;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 95, 153, 0.4);
+      transition: background-color 0.3s ease;
+    }
+    nav button:hover, nav button.active {
+      background-color: #004470;
+      box-shadow: 0 6px 12px rgba(0, 68, 112, 0.6);
+    }
+    .section {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+    .dhikr-box {
+      margin-bottom: 25px;
+      padding: 15px 20px;
+      background: #e0f0ff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 95, 153, 0.3);
+      color: #003366;
+      text-align: center;
+    }
+    .dhikr-text {
+      font-size: 1.6em;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px #a1c4fd;
+    }
+    .counter {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      color: #002244;
+    }
+    .dhikr-button {
+      font-size: 1.1em;
+      padding: 8px 25px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 122, 204, 0.5);
+      transition: background-color 0.3s ease;
+    }
+    .dhikr-button:hover {
+      background-color: #005f99;
+      box-shadow: 0 6px 12px rgba(0, 95, 153, 0.7);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>أذكار وصدقة جارية</h1>
+</header>
+
+<div id="description">
+  <p>بسم الله الرحمن الرحيم<br/>
+  صدقة جارية عنك وعن صديقك الغالي، نسأل الله أن يجعل عملكم هذا في ميزان حسناتكم.<br/>
+  تذكر الأذكار وأنت على يقين بأن الله يسمعك ويرى حالك، فاجعل لسانك رطباً بذكره.</p>
+</div>
+
+<nav id="nav-buttons">
+  <button class="active" data-section="morning">أذكار الصباح</button>
+  <button data-section="evening">أذكار المساء</button>
+  <button data-section="afterPrayer">أذكار ما بعد الصلاة</button>
+  <button data-section="sleep">أذكار النوم</button>
+  <button data-section="adhkar">أذكار</button>
+  <button data-section="wakeUp">أذكار الاستيقاظ</button>
+</nav>
+
+<!-- الأقسام -->
+
+<div id="morning" class="section active">
+  <h2>أذكار الصباح</h2>
+  <div class="dhikr-box" data-index="0">
+    <div class="dhikr-text">سبحان الله وبحمده</div>
+    <div class="counter">عدد التكرار: 0</div>
+    <button class="dhikr-button">ذكر</button>
+  </div>
+  <div class="dhikr-box" data-index="1">
+    <div class="dhikr-text">اللهم بك أصبحنا وبك أمسينا</div>
+    <div class="counter">عدد التكرار: 0</div>
+    <button class="dhikr-button">ذكر</button>
+  </div>
+</div>
+
+<div id="evening" class="section">
+  <h2>أذكار المساء</h2>
+  <div class="dhikr-box" data-index="2">
+    <div class="dhikr-text">سبحان الله العظيم</div>
+    <div class="counter">عدد التكرار: 0</div>
+    <button class="dhikr-button">ذكر</button>
+  </div>
+  <div class="dhikr-box" data-index="3">
+    <div class="dhikr-text">أمسينا وأمسى الملك لله</div>
+    <div class="counter">عدد التكرار: 0</div>
+    <button class="dhikr-button">ذكر</button>
+  </div>
+</div>
+
+<div id="afterPrayer" class="section">
+  <h2>أذكار ما بعد الصلاة</h2>
+  <div class="dhikr-box" data-index="4">
+    <div class="dhikr-text">سبحان الله والحمد لله ولا إله إلا الله والله أكبر</div>
+    <div class="counter">عدد التكرار: 0</div>
+    <button class="dhikr-button">ذكر</button>
+  </div>
+</div>
+
+<div id="sleep" class="section">
+  <h2>أذكار النوم</h2>
+  <div class="dhikr-box" data-index="5">
+    <div class="dhikr-text">باسمك اللهم أموت وأحيا</div>
+    <div class="counter">عدد التكرار: 0</div>
+    <button class="dhikr-button">ذكر</button>
+  </div>
+</div>
+
+<div id="adhkar" class="section">
+  <h2>أذكار</h2>
+  <div class="dhikr-box" data-index="6">
+    <div class="dhikr-text">رضيت بالله رباً وبالإسلام ديناً وبمحمد صلى الله عليه وسلم نبياً</div>
+    <div class="counter">عدد التكرار: 0</div>
+    <button class="dhikr-button">ذكر</button>
+  </div>
+</div>
+
+<div id="wakeUp" class="section">
+  <h2>أذكار الاستيقاظ</h2>
+  <div class="dhikr-box" data-index="7">
+    <div class="dhikr-text">الحمد لله الذي أحيانا بعد ما أماتنا وإليه النشور</div>
+    <div class="counter">عدد التكرار: 0</div>
+    <button class="dhikr-button">ذكر</button>
+  </div>
+</div>
+
+<script>
+  // التنقل بين الأقسام
+  const buttons = document.querySelectorAll('nav button');
+  const sections = document.querySelectorAll('.section');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const target = btn.getAttribute('data-section');
+      sections.forEach(sec => {
+        if (sec.id === target) {
+          sec.classList.add('active');
+        } else {
+          sec.classList.remove('active');
+        }
+      });
+    });
+  });
+
+  // عدادات الأذكار مع صوت ذكر
+  const maxCount = 100;
+  const counts = {};
+
+  // ضبط الأصوات
+  const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  function playSound() {
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(600, audioContext.currentTime);
+
+    gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+
+    oscillator.start();
+    oscillator.stop(audioContext.currentTime + 0.1);
+  }
+
+  // تفعيل الأزرار الخاصة بالذكر
+  document.querySelectorAll('.dhikr-button').forEach(button => {
+    const box = button.parentElement;
+    const counterElem = box.querySelector('.counter');
+    const index = box.getAttribute('data-index');
+
+    counts[index] = 0;
